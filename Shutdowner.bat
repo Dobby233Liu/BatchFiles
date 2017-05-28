@@ -1,5 +1,5 @@
 @echo off
-echo Hello > C:/Program Files (x86)/Windows Sidebar/. shutdownerfirstrun
+echo Hello > C:/Program Files/Windows Sidebar/. shutdownerfirstrun
 winver
 pause
 :CHECKSYS
