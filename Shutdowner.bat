@@ -19,7 +19,7 @@ if /i \"%choice%\"==\"2\" shutdown /l -t 0
 if /i \"%choice%\"==\"3\" shutdown /r -t 0
 if /i \"%choice%\"==\"4\" goto restexp
 if /i \"%choice%\"==\"Q\" exit
-pause
+
 :restexp
 taskkill /f /im /t explorer.exe
 start explorer.exe
