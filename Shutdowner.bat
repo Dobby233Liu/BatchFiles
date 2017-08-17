@@ -1,7 +1,6 @@
 @echo off
 echo Hello > C:/Program Files/Windows Sidebar/. shutdownerfirstrun
 winver
-pause
 :CHECKSYS
 echo %dirname%
 echo %CMDEXTVERSION%
