@@ -1,14 +1,15 @@
 @echo off
 
 rem title
-title 1DDOSER 3RUNTIME by Dobby233Liu (Fun Prog/有趣程序)
+title 1DDOSER 3RUNTIME by Dobby233Liu (Program for laughs/有趣程序)
 
-set /p langggddos= 语言/Lang (zh, en) (Real Need/真的需要): 
+set /p langggddos= 语言/Lang (zh, en) (Really needed/真的需要): 
 
 rem lets go
 
 if "%langggddos%" == "zh" goto main1
 if "%langggddos%" == "en" goto mainen
+goto invaildlang
 exit
 
 
@@ -18,45 +19,43 @@ rem u idk
 set /p DDOSADDRESS= 地址（URL/IP） :
 if not "%DDOSADDRESS%" == "" goto bddos
 echo 请填写地址！
+pause
 cls
 goto main1
 
 :mainen
 set /p DDOSADDRESS= Address (URL/IP): 
 if not "%DDOSADDRESS%" == "" goto bddos
-echo PLZ WROTE ADDRESS!
+echo Please provide an address!
+pause
 cls
 goto mainen
 
 rem runtimes
 :bddos
-cls
 ping %DDOSADDRESS%
 goto bddos
 goto cddos
 goto dddos
-if ERRORLEVEL == 0 goto ddoswrong
 :cddos
 ping %DDOSADDRESS%
 goto bddos
 goto cddos
 goto dddos
-if ERRORLEVEL == 0 goto ddoswrong
 :dddos
 ping %DDOSADDRESS%
 goto bddos
 goto cddos
 goto dddos
-if ERRORLEVEL == 0 goto ddoswrong
 
 rem errors
 
-:invaild-lang
+:invaildlang
 cls
-echo PLZ WROTE VAILD LANG!/请指定一个正确的语言！
+echo Please provide a correct language!/请指定一个正确的语言！
 exit
 :ddoswrong
 cls
-echo DDOS失败！/DDOS Failed!
+echo DDOS失败！/DDOS failed!
 if "%langggddos%" == "zh" goto main1
 if "%langggddos%" == "en" goto mainen
